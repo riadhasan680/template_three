@@ -6,7 +6,7 @@
 <body class="flex flex-col min-h-screen bg-dark-900 text-gray-100">
   {{ partial "topbar.html" . }}
   {{ partial "header.html" . }}
-  {{ $topbar := resources.Get "js/topbar.js" | js.Build }}
+  {{ $topbar := resources.Get "js/topbar.js" | minify | fingerprint }}
   <script src="{{ $topbar.RelPermalink }}" defer></script>
 
   <main class="flex-grow grow w-full  bg-white">
