@@ -8,29 +8,32 @@
             <div class="overflow-hidden" id="slider-container-{{ $id }}">
                 <div class="flex transition-transform duration-500 ease-in-out" id="slider-track-{{ $id }}">
                     {{ $count := len $pages }}
-                    {{ $slides := div $count $chunkSize }}
-                    {{ if gt (mod $count $chunkSize) 0 }}
-                        {{ $slides = add $slides 1 }}
-                    {{ end }}
-
-                    {{ range $i := seq 0 (sub $slides 1) }}
-                    {{ $offset := mul $i $chunkSize }}
-                    <div class="w-full flex-shrink-0 grid grid-cols-5 gap-3">
-                        {{ range first $chunkSize (after $offset $pages) }}
-                        <a href="{{ .Permalink }}" class="group/card flex flex-col gap-2 p-2  hover:bg-gray-50 transition-colors">
-                            <div class="relative aspect-[16/10] overflow-hidden rounded-md bg-gray-100 shadow-sm">
-                                <img src="{{ if .Params.image }}{{ .Params.image }}{{ else }}https://placehold.co/400x300{{ end }}" 
-                                     alt="{{ .Title }}" 
-                                     class="w-full h-full object-cover transition-transform duration-500 group-hover/card:scale-110">
-                                <div class="absolute inset-0 bg-black/10 group-hover/card:bg-transparent transition-colors"></div>
-                            </div>
-                            <h4 class="text-sm font-normal text-gray-900 leading-snug group-hover/card:text-red-600 transition-colors tracking-wide line-clamp-2 mt-1">
-                                {{ .Title }}
-                            </h4>
-                            <span class="text-xs text-gray-500 font-medium uppercase tracking-wide">{{ .Date.Format "Jan 02, 2006" }}</span>
-                        </a>
+                    {{ if gt $count 0 }}
+                        {{ $chunkSize := 5 }}
+                        {{ $slides := div $count $chunkSize }}
+                        {{ if gt (mod $count $chunkSize) 0 }}
+                            {{ $slides = add $slides 1 }}
                         {{ end }}
-                    </div>
+
+                        {{ range $i := seq 0 (sub $slides 1) }}
+                        {{ $offset := mul $i $chunkSize }}
+                        <div class="w-full flex-shrink-0 grid grid-cols-5 gap-3">
+                            {{ range first $chunkSize (after $offset $pages) }}
+                            <a href="{{ .Permalink }}" class="group/card flex flex-col gap-2 p-2  hover:bg-gray-50 transition-colors">
+                                <div class="relative aspect-[16/10] overflow-hidden rounded-md bg-gray-100 shadow-sm">
+                                    <img src="{{ if .Params.image }}{{ .Params.image }}{{ else }}https://placehold.co/400x300{{ end }}" 
+                                         alt="{{ .Title }}" 
+                                         class="w-full h-full object-cover transition-transform duration-500 group-hover/card:scale-110">
+                                    <div class="absolute inset-0 bg-black/10 group-hover/card:bg-transparent transition-colors"></div>
+                                </div>
+                                <h4 class="text-sm font-normal text-gray-900 leading-snug group-hover/card:text-red-600 transition-colors tracking-wide line-clamp-2 mt-1">
+                                    {{ .Title }}
+                                </h4>
+                                <span class="text-xs text-gray-500 font-medium uppercase tracking-wide">{{ .Date.Format "Jan 02, 2006" }}</span>
+                            </a>
+                            {{ end }}
+                        </div>
+                        {{ end }}
                     {{ end }}
                 </div>
             </div>
