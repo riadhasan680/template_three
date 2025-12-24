@@ -14,6 +14,6 @@
 />
 
 {{ $styles := resources.Get "css/main.css" | postCSS }}
-{{ if hugo.IsProduction }}{{ $styles = $styles | minify | fingerprint }}{{ end }}
+{{ $styles = $styles | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
 <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
