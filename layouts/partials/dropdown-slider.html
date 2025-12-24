@@ -1,0 +1,81 @@
+{{ $id := .id }}
+{{ $pages := first 20 .pages }}
+{{ $chunkSize := 5 }}
+<div class="absolute left-0 top-full w-full bg-white shadow-xl border-t border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[100]">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-5">
+        <div class="relative group/slider">
+            <!-- Slider Container -->
+            <div class="overflow-hidden" id="slider-container-{{ $id }}">
+                <div class="flex transition-transform duration-500 ease-in-out" id="slider-track-{{ $id }}">
+                    {{ $count := len $pages }}
+                    {{ $slides := div $count $chunkSize }}
+                    {{ if gt (mod $count $chunkSize) 0 }}
+                        {{ $slides = add $slides 1 }}
+                    {{ end }}
+
+                    {{ range $i := seq 0 (sub $slides 1) }}
+                    {{ $offset := mul $i $chunkSize }}
+                    <div class="w-full flex-shrink-0 grid grid-cols-5 gap-3">
+                        {{ range first $chunkSize (after $offset $pages) }}
+                        <a href="{{ .Permalink }}" class="group/card flex flex-col gap-2 p-2  hover:bg-gray-50 transition-colors">
+                            <div class="relative aspect-[16/10] overflow-hidden rounded-md bg-gray-100 shadow-sm">
+                                <img src="{{ if .Params.image }}{{ .Params.image }}{{ else }}https://placehold.co/400x300{{ end }}" 
+                                     alt="{{ .Title }}" 
+                                     class="w-full h-full object-cover transition-transform duration-500 group-hover/card:scale-110">
+                                <div class="absolute inset-0 bg-black/10 group-hover/card:bg-transparent transition-colors"></div>
+                            </div>
+                            <h4 class="text-sm font-normal text-gray-900 leading-snug group-hover/card:text-red-600 transition-colors tracking-wide line-clamp-2 mt-1">
+                                {{ .Title }}
+                            </h4>
+                            <span class="text-xs text-gray-500 font-medium uppercase tracking-wide">{{ .Date.Format "Jan 02, 2006" }}</span>
+                        </a>
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            {{ if gt (len $pages) $chunkSize }}
+            <div class="flex justify-center items-center gap-3 mt-4">
+                <button onclick="moveSlider('{{ $id }}', 'prev')" 
+                        class="w-8 h-8  border border-gray-200 flex items-center justify-center text-gray-600 hover:bg-red-600 hover:border-red-600 hover:text-white transition-all duration-300">
+                    <iconify-icon icon="mdi:chevron-left" class="text-xl"></iconify-icon>
+                </button>
+                <button onclick="moveSlider('{{ $id }}', 'next')" 
+                        class="w-8 h-8  border border-gray-200 flex items-center justify-center text-gray-600 hover:bg-red-600 hover:border-red-600 hover:text-white transition-all duration-300">
+                    <iconify-icon icon="mdi:chevron-right" class="text-xl"></iconify-icon>
+                </button>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</div>
+
+<script>
+if (typeof moveSlider === 'undefined') {
+    window.currentIndexes = {};
+    
+    window.moveSlider = function(id, direction) {
+        const track = document.getElementById(`slider-track-${id}`);
+        if (!track) return;
+        
+        // Calculate max index dynamically based on children count
+        const slides = track.children.length;
+        const maxIndex = slides - 1;
+
+        if (typeof window.currentIndexes[id] === 'undefined') {
+            window.currentIndexes[id] = 0;
+        }
+        
+        if (direction === 'next') {
+            window.currentIndexes[id] = window.currentIndexes[id] >= maxIndex ? 0 : window.currentIndexes[id] + 1;
+        } else {
+            window.currentIndexes[id] = window.currentIndexes[id] <= 0 ? maxIndex : window.currentIndexes[id] - 1;
+        }
+        
+        const percentage = window.currentIndexes[id] * 100;
+        track.style.transform = `translateX(-${percentage}%)`;
+    }
+}
+</script>

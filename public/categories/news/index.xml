@@ -1,33 +1,97 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>News on TheDoubleKill — Gaming News Template</title>
-    <link>/categories/news/</link>
-    <description>Recent content in News on TheDoubleKill — Gaming News Template</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 03 Dec 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/categories/news/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Final Fantasy 7’s Aerith Calls Out Creeps Tagging Voice Actors</title>
-      <link>/posts/ff7-aerith-voice-actors/</link>
-      <pubDate>Wed, 03 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>/posts/ff7-aerith-voice-actors/</guid>
-      <description>&lt;p&gt;Briana White asked fans to stop tagging voice artists in explicit content, sparking a wider conversation about boundaries in fan communities.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>No Man’s Sky Boss Ridicules Similar Once Human Premium</title>
-      <link>/posts/no-mans-sky-vs-once-human/</link>
-      <pubDate>Wed, 03 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>/posts/no-mans-sky-vs-once-human/</guid>
-      <description>&lt;p&gt;Debate sparked after fans alleged an asset from No Man’s Sky appeared in Once Human for sale without permission, drawing comments from Hello Games.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Someone Actually Just Escaped From Tarkov</title>
-      <link>/posts/first-escape-from-tarkov/</link>
-      <pubDate>Wed, 03 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>/posts/first-escape-from-tarkov/</guid>
-      <description>&lt;p&gt;Streamer Tigz has managed to actually escape, marking a first for the game. Fans are buzzing as new strategies emerge across the community.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>News on TheDoubleKill — Gaming News Template</title><link>/categories/news/</link><description>Recent content in News on TheDoubleKill — Gaming News Template</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 18 Dec 2025 20:21:24 +0600</lastBuildDate><atom:link href="/categories/news/index.xml" rel="self" type="application/rss+xml"/><item><title>Developer Interview: Behind the Scenes - 4</title><link>/news/news-post-4/</link><pubDate>Thu, 18 Dec 2025 20:21:24 +0600</pubDate><guid>/news/news-post-4/</guid><description>&lt;h2 id="developer-interview-behind-the-scenes---4"&gt;Developer Interview: Behind the Scenes - 4&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+&lt;h3 id="key-highlights"&gt;Key Highlights&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Feature 1: Amazing graphics and gameplay.&lt;/li&gt;
+&lt;li&gt;Feature 2: Immersive storyline.&lt;/li&gt;
+&lt;li&gt;Feature 3: Multiplayer capabilities.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</description></item><item><title>Developer Interview: Behind the Scenes - 12</title><link>/news/news-post-12/</link><pubDate>Thu, 04 Dec 2025 20:21:24 +0600</pubDate><guid>/news/news-post-12/</guid><description>&lt;h2 id="developer-interview-behind-the-scenes---12"&gt;Developer Interview: Behind the Scenes - 12&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+&lt;h3 id="key-highlights"&gt;Key Highlights&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Feature 1: Amazing graphics and gameplay.&lt;/li&gt;
+&lt;li&gt;Feature 2: Immersive storyline.&lt;/li&gt;
+&lt;li&gt;Feature 3: Multiplayer capabilities.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</description></item><item><title>Breaking News: New Console Announced - 11</title><link>/news/news-post-11/</link><pubDate>Wed, 03 Dec 2025 20:21:24 +0600</pubDate><guid>/news/news-post-11/</guid><description>&lt;h2 id="breaking-news-new-console-announced---11"&gt;Breaking News: New Console Announced - 11&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+&lt;h3 id="key-highlights"&gt;Key Highlights&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Feature 1: Amazing graphics and gameplay.&lt;/li&gt;
+&lt;li&gt;Feature 2: Immersive storyline.&lt;/li&gt;
+&lt;li&gt;Feature 3: Multiplayer capabilities.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</description></item><item><title>Final Fantasy 7’s Aerith Calls Out Creeps Tagging Voice Actors</title><link>/posts/ff7-aerith-voice-actors/</link><pubDate>Wed, 03 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/ff7-aerith-voice-actors/</guid><description>&lt;p&gt;Briana White asked fans to stop tagging voice artists in explicit content, sparking a wider conversation about boundaries in fan communities.&lt;/p&gt;</description></item><item><title>No Man’s Sky Boss Ridicules Similar Once Human Premium</title><link>/posts/no-mans-sky-vs-once-human/</link><pubDate>Wed, 03 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/no-mans-sky-vs-once-human/</guid><description>&lt;p&gt;Debate sparked after fans alleged an asset from No Man’s Sky appeared in Once Human for sale without permission, drawing comments from Hello Games.&lt;/p&gt;</description></item><item><title>Someone Actually Just Escaped From Tarkov</title><link>/posts/first-escape-from-tarkov/</link><pubDate>Wed, 03 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/first-escape-from-tarkov/</guid><description>&lt;p&gt;Streamer Tigz has managed to actually escape, marking a first for the game. Fans are buzzing as new strategies emerge across the community.&lt;/p&gt;</description></item><item><title>Developer Interview: Behind the Scenes - 6</title><link>/news/news-post-6/</link><pubDate>Tue, 02 Dec 2025 20:21:24 +0600</pubDate><guid>/news/news-post-6/</guid><description>&lt;h2 id="developer-interview-behind-the-scenes---6"&gt;Developer Interview: Behind the Scenes - 6&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+&lt;h3 id="key-highlights"&gt;Key Highlights&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Feature 1: Amazing graphics and gameplay.&lt;/li&gt;
+&lt;li&gt;Feature 2: Immersive storyline.&lt;/li&gt;
+&lt;li&gt;Feature 3: Multiplayer capabilities.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</description></item><item><title>Developer Interview: Behind the Scenes - 1</title><link>/news/news-post-1/</link><pubDate>Sat, 29 Nov 2025 20:21:24 +0600</pubDate><guid>/news/news-post-1/</guid><description>&lt;h2 id="developer-interview-behind-the-scenes---1"&gt;Developer Interview: Behind the Scenes - 1&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+&lt;h3 id="key-highlights"&gt;Key Highlights&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Feature 1: Amazing graphics and gameplay.&lt;/li&gt;
+&lt;li&gt;Feature 2: Immersive storyline.&lt;/li&gt;
+&lt;li&gt;Feature 3: Multiplayer capabilities.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</description></item><item><title>Developer Interview: Behind the Scenes - 9</title><link>/news/news-post-9/</link><pubDate>Sat, 29 Nov 2025 20:21:24 +0600</pubDate><guid>/news/news-post-9/</guid><description>&lt;h2 id="developer-interview-behind-the-scenes---9"&gt;Developer Interview: Behind the Scenes - 9&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+&lt;h3 id="key-highlights"&gt;Key Highlights&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Feature 1: Amazing graphics and gameplay.&lt;/li&gt;
+&lt;li&gt;Feature 2: Immersive storyline.&lt;/li&gt;
+&lt;li&gt;Feature 3: Multiplayer capabilities.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</description></item><item><title>Breaking News: New Console Announced - 7</title><link>/news/news-post-7/</link><pubDate>Sun, 23 Nov 2025 20:21:24 +0600</pubDate><guid>/news/news-post-7/</guid><description>&lt;h2 id="breaking-news-new-console-announced---7"&gt;Breaking News: New Console Announced - 7&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+&lt;h3 id="key-highlights"&gt;Key Highlights&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Feature 1: Amazing graphics and gameplay.&lt;/li&gt;
+&lt;li&gt;Feature 2: Immersive storyline.&lt;/li&gt;
+&lt;li&gt;Feature 3: Multiplayer capabilities.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</description></item><item><title>Developer Interview: Behind the Scenes - 5</title><link>/news/news-post-5/</link><pubDate>Sat, 22 Nov 2025 20:21:24 +0600</pubDate><guid>/news/news-post-5/</guid><description>&lt;h2 id="developer-interview-behind-the-scenes---5"&gt;Developer Interview: Behind the Scenes - 5&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+&lt;h3 id="key-highlights"&gt;Key Highlights&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Feature 1: Amazing graphics and gameplay.&lt;/li&gt;
+&lt;li&gt;Feature 2: Immersive storyline.&lt;/li&gt;
+&lt;li&gt;Feature 3: Multiplayer capabilities.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</description></item><item><title>Developer Interview: Behind the Scenes - 8</title><link>/news/news-post-8/</link><pubDate>Tue, 18 Nov 2025 20:21:24 +0600</pubDate><guid>/news/news-post-8/</guid><description>&lt;h2 id="developer-interview-behind-the-scenes---8"&gt;Developer Interview: Behind the Scenes - 8&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+&lt;h3 id="key-highlights"&gt;Key Highlights&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Feature 1: Amazing graphics and gameplay.&lt;/li&gt;
+&lt;li&gt;Feature 2: Immersive storyline.&lt;/li&gt;
+&lt;li&gt;Feature 3: Multiplayer capabilities.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</description></item><item><title>Breaking News: New Console Announced - 10</title><link>/news/news-post-10/</link><pubDate>Sun, 02 Nov 2025 20:21:24 +0600</pubDate><guid>/news/news-post-10/</guid><description>&lt;h2 id="breaking-news-new-console-announced---10"&gt;Breaking News: New Console Announced - 10&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+&lt;h3 id="key-highlights"&gt;Key Highlights&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Feature 1: Amazing graphics and gameplay.&lt;/li&gt;
+&lt;li&gt;Feature 2: Immersive storyline.&lt;/li&gt;
+&lt;li&gt;Feature 3: Multiplayer capabilities.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</description></item><item><title>Developer Interview: Behind the Scenes - 2</title><link>/news/news-post-2/</link><pubDate>Thu, 30 Oct 2025 20:21:24 +0600</pubDate><guid>/news/news-post-2/</guid><description>&lt;h2 id="developer-interview-behind-the-scenes---2"&gt;Developer Interview: Behind the Scenes - 2&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+&lt;h3 id="key-highlights"&gt;Key Highlights&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Feature 1: Amazing graphics and gameplay.&lt;/li&gt;
+&lt;li&gt;Feature 2: Immersive storyline.&lt;/li&gt;
+&lt;li&gt;Feature 3: Multiplayer capabilities.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</description></item><item><title>Developer Interview: Behind the Scenes - 3</title><link>/news/news-post-3/</link><pubDate>Tue, 28 Oct 2025 20:21:24 +0600</pubDate><guid>/news/news-post-3/</guid><description>&lt;h2 id="developer-interview-behind-the-scenes---3"&gt;Developer Interview: Behind the Scenes - 3&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+&lt;h3 id="key-highlights"&gt;Key Highlights&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Feature 1: Amazing graphics and gameplay.&lt;/li&gt;
+&lt;li&gt;Feature 2: Immersive storyline.&lt;/li&gt;
+&lt;li&gt;Feature 3: Multiplayer capabilities.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</description></item></channel></rss>

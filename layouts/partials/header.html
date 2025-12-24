@@ -22,20 +22,41 @@
       <!-- Desktop Nav (Center/Left) -->
       <nav class="hidden md:flex items-center gap-4 md:gap-6 whitespace-nowrap ml-20">
         <a href="/"
-          class="text-black  px-3 py-1 rounded-sm font-normal uppercase tracking-wide text-sm md:text-[16px] transition-colors">Home</a>
-        <a href="/news"
-          class="text-black hover:text-brand font-normal uppercase tracking-tight text-xs md:text-[16px] transition-colors">Game
-          News</a>
+          class="text-black px-3 py-1 rounded-sm font-normal uppercase tracking-wide text-sm md:text-[16px] transition-colors">Home</a>
+        
+        <!-- LATEST NEWS Dropdown -->
+        <div class="group">
+          <a href="/news" class="text-black hover:text-brand font-normal uppercase tracking-tight text-xs md:text-[16px] transition-colors flex items-center gap-1 py-4">
+            Latest News <iconify-icon icon="mdi:chevron-down" class="text-sm"></iconify-icon>
+          </a>
+          {{ partial "dropdown-slider.html" (dict "id" "latest-news" "pages" .Site.RegularPages) }}
+        </div>
+
         <a href="/playstation"
           class="text-black hover:text-brand font-normal uppercase tracking-tight text-xs md:text-[16px] transition-colors">PlayStation</a>
         <a href="/reviews"
           class="text-black hover:text-brand font-normal uppercase tracking-tight text-xs md:text-[16px] transition-colors">Reviews</a>
         <a href="/releases"
-          class="text-black hover:text-brand font-normal uppercase tracking-tight text-xs md:text-[16px] transition-colors">Game
-          Releases</a>
+          class="text-black hover:text-brand font-normal uppercase tracking-tight text-xs md:text-[16px] transition-colors">Game Releases</a>
+
+        <!-- VIDEO GAMES Dropdown -->
+        <div class="group">
+          <a href="/video-games" class="text-black hover:text-brand font-normal uppercase tracking-tight text-xs md:text-[16px] transition-colors flex items-center gap-1 py-4">
+            Video Games <iconify-icon icon="mdi:chevron-down" class="text-sm"></iconify-icon>
+          </a>
+          {{ partial "dropdown-slider.html" (dict "id" "video-games" "pages" .Site.RegularPages) }}
+        </div>
+
+        <!-- TOP GAMES Dropdown -->
+        <div class="group">
+          <a href="/top-games" class="text-black hover:text-brand font-normal uppercase tracking-tight text-xs md:text-[16px] transition-colors flex items-center gap-1 py-4">
+            Top Games <iconify-icon icon="mdi:chevron-down" class="text-sm"></iconify-icon>
+          </a>
+          {{ partial "dropdown-slider.html" (dict "id" "top-games" "pages" .Site.RegularPages) }}
+        </div>
+
         <a href="/apex-legends"
-          class="text-black hover:text-brand font-normal uppercase tracking-tight text-xs md:text-[16px] transition-colors">Apex
-          Legends</a>
+          class="text-black hover:text-brand font-normal uppercase tracking-tight text-xs md:text-[16px] transition-colors">Apex Legends</a>
         <a href="/fortnite"
           class="text-black hover:text-brand font-normal uppercase tracking-tight text-xs md:text-[16px] transition-colors">Fortnite</a>
       </nav>
@@ -55,12 +76,76 @@
   <!-- Mobile Side Menu Drawer -->
   <div id="mobile-menu"
     class="fixed top-[95px] left-0 bottom-0 w-[80%] max-w-sm bg-red-600 shadow-2xl z-40 transform -translate-x-full transition-transform duration-300 ease-in-out">
-    <nav class="px-6 py-4 flex flex-col gap-6 font-heading">
+    <nav class="px-6 py-4 flex flex-col gap-6 font-heading overflow-y-auto max-h-[calc(100vh-200px)]">
       <a href="/" class="text-white hover:text-gray-200 font-medium uppercase text-sm border-b border-white/20 pb-2">Home</a>
-      <a href="/news" class="text-white hover:text-gray-200 font-medium uppercase text-sm border-b border-white/20 pb-2">Game News</a>
+      
+      <!-- Latest News Mobile Dropdown -->
+      <div class="flex flex-col">
+        <div class="flex items-center justify-between border-b border-white/20 pb-2">
+          <a href="/news" class="text-white hover:text-gray-200 font-medium uppercase text-sm">Latest News</a>
+          <button onclick="toggleMobileDropdown('mobile-latest-news')" class="text-white hover:text-brand transition-colors p-1">
+            <iconify-icon icon="mdi:chevron-down" class="text-lg transition-transform duration-300" id="icon-mobile-latest-news"></iconify-icon>
+          </button>
+        </div>
+        <div id="mobile-latest-news" class="hidden flex-col gap-3 mt-3 pl-2 border-l border-white/10">
+          {{ range first 5 .Site.RegularPages }}
+          <a href="{{ .Permalink }}" class="flex gap-3 items-start group">
+            <div class="w-16 h-12 flex-shrink-0 overflow-hidden rounded bg-gray-800">
+              <img src="{{ if .Params.image }}{{ .Params.image }}{{ else }}https://placehold.co/100x100{{ end }}" class="w-full h-full object-cover transition-transform group-hover:scale-110" alt="{{ .Title }}">
+            </div>
+            <span class="text-white/90 text-xs font-medium leading-tight group-hover:text-white line-clamp-2">{{ .Title }}</span>
+          </a>
+          {{ end }}
+          <a href="/news" class="text-xs text-white/60 hover:text-white uppercase tracking-wider mt-1">View All News &rarr;</a>
+        </div>
+      </div>
+
       <a href="/playstation" class="text-white hover:text-gray-200 font-medium uppercase text-sm border-b border-white/20 pb-2">PlayStation</a>   
       <a href="/reviews" class="text-white hover:text-gray-200 font-medium uppercase text-sm border-b border-white/20 pb-2">Reviews</a>
       <a href="/releases" class="text-white hover:text-gray-200 font-medium uppercase text-sm border-b border-white/20 pb-2">Game Releases</a>
+
+      <!-- Video Games Mobile Dropdown -->
+      <div class="flex flex-col">
+        <div class="flex items-center justify-between border-b border-white/20 pb-2">
+          <a href="/video-games" class="text-white hover:text-gray-200 font-medium uppercase text-sm">Video Games</a>
+          <button onclick="toggleMobileDropdown('mobile-video-games')" class="text-white hover:text-brand transition-colors p-1">
+            <iconify-icon icon="mdi:chevron-down" class="text-lg transition-transform duration-300" id="icon-mobile-video-games"></iconify-icon>
+          </button>
+        </div>
+        <div id="mobile-video-games" class="hidden flex-col gap-3 mt-3 pl-2 border-l border-white/10">
+          {{ range first 5 .Site.RegularPages }}
+          <a href="{{ .Permalink }}" class="flex gap-3 items-start group">
+            <div class="w-16 h-12 flex-shrink-0 overflow-hidden rounded bg-gray-800">
+              <img src="{{ if .Params.image }}{{ .Params.image }}{{ else }}https://placehold.co/100x100{{ end }}" class="w-full h-full object-cover transition-transform group-hover:scale-110" alt="{{ .Title }}">
+            </div>
+            <span class="text-white/90 text-xs font-medium leading-tight group-hover:text-white line-clamp-2">{{ .Title }}</span>
+          </a>
+          {{ end }}
+          <a href="/video-games" class="text-xs text-white/60 hover:text-white uppercase tracking-wider mt-1">View All Games &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Top Games Mobile Dropdown -->
+      <div class="flex flex-col">
+        <div class="flex items-center justify-between border-b border-white/20 pb-2">
+          <a href="/top-games" class="text-white hover:text-gray-200 font-medium uppercase text-sm">Top Games</a>
+          <button onclick="toggleMobileDropdown('mobile-top-games')" class="text-white hover:text-brand transition-colors p-1">
+            <iconify-icon icon="mdi:chevron-down" class="text-lg transition-transform duration-300" id="icon-mobile-top-games"></iconify-icon>
+          </button>
+        </div>
+        <div id="mobile-top-games" class="hidden flex-col gap-3 mt-3 pl-2 border-l border-white/10">
+          {{ range first 5 .Site.RegularPages }}
+          <a href="{{ .Permalink }}" class="flex gap-3 items-start group">
+            <div class="w-16 h-12 flex-shrink-0 overflow-hidden rounded bg-gray-800">
+              <img src="{{ if .Params.image }}{{ .Params.image }}{{ else }}https://placehold.co/100x100{{ end }}" class="w-full h-full object-cover transition-transform group-hover:scale-110" alt="{{ .Title }}">
+            </div>
+            <span class="text-white/90 text-xs font-medium leading-tight group-hover:text-white line-clamp-2">{{ .Title }}</span>
+          </a>
+          {{ end }}
+          <a href="/top-games" class="text-xs text-white/60 hover:text-white uppercase tracking-wider mt-1">View All Top Games &rarr;</a>
+        </div>
+      </div>
+
       <a href="/apex-legends" class="text-white hover:text-gray-200 font-medium uppercase text-sm border-b border-white/20 pb-2">Apex Legends</a>
       <a href="/fortnite" class="text-white hover:text-gray-200 font-medium uppercase text-sm border-b border-white/20 pb-2">Fortnite</a>
     </nav>
@@ -151,6 +236,24 @@
 
       if (mobileBtn) mobileBtn.addEventListener('click', toggleMobileMenu);
       if (overlay) overlay.addEventListener('click', toggleMobileMenu);
+
+      // Mobile Dropdown Toggle Logic
+      window.toggleMobileDropdown = function(id) {
+        const content = document.getElementById(id);
+        const icon = document.getElementById('icon-' + id);
+        
+        if (content.classList.contains('hidden')) {
+          // Open
+          content.classList.remove('hidden');
+          content.classList.add('flex');
+          if (icon) icon.style.transform = 'rotate(180deg)';
+        } else {
+          // Close
+          content.classList.add('hidden');
+          content.classList.remove('flex');
+          if (icon) icon.style.transform = 'rotate(0deg)';
+        }
+      }
     });
   </script>
 </header>
