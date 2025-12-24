@@ -4,15 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"npm run tailwind\" \"npm run hugo\"",
-    "tailwind": "npx tailwindcss -i ./assets/css/main.css -o ./static/css/output.css --watch",
-    "hugo": "hugo server --disableFastRender --ignoreCache --poll 700ms",
-    "build": "npx tailwindcss -i ./assets/css/main.css -o ./static/css/output.css && npx -y hugo-bin -- --gc --minify",
-    "start": "hugo server -D --disableFastRender",
-    "serve": "hugo server -D --disableFastRender",
-    "develop": "concurrently \"npm run watch:css\" \"npm run serve\"",
-    "watch:css": "npx tailwindcss -i ./assets/css/main.css -o ./assets/css/output.css --watch",
-    "build:css": "npx tailwindcss -i ./assets/css/main.css -o ./assets/css/output.css"
+    "dev": "hugo server --disableFastRender --ignoreCache",
+    "build": "hugo --gc --minify",
+    "start": "hugo server -D",
+    "serve": "hugo server -D"
   },
  
   "keywords": [],
