@@ -1,0 +1,21 @@
+<article class="bg-zinc-800 rounded-xl overflow-hidden shadow ring-1 ring-zinc-700">
+  <a href="{{ .RelPermalink }}" class="block">
+    {{ if .Params.image }}
+      <img class="w-full h-40 object-cover" src="{{ .Params.image }}" alt="">
+    {{ else }}
+      <img class="w-full h-40 object-cover" src="https://picsum.photos/seed/{{ .Title | urlize }}/800/400" alt="">
+    {{ end }}
+  </a>
+  <div class="p-4">
+    <div class="flex items-center gap-2 mb-2">
+      {{ if .Params.categories }}
+        {{ range first 1 .Params.categories }}
+          <span class="inline-block text-xs uppercase tracking-wide px-2 py-1 rounded bg-zinc-700 text-zinc-200">{{ . }}</span>
+        {{ end }}
+      {{ end }}
+      <span class="text-xs text-zinc-400">{{ .Date.Format "Jan 2, 2006" }}</span>
+    </div>
+    <a href="{{ .RelPermalink }}" class="text-lg font-semibold hover:text-brand transition-colors">{{ .Title }}</a>
+    <p class="mt-2 text-sm text-zinc-300">{{ with .Summary }}{{ . }}{{ else }}{{ .Plain | truncate 140 }}{{ end }}</p>
+  </div>
+</article>

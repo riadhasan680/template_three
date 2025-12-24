@@ -1,0 +1,160 @@
+<footer class="bg-[#111111] text-white pt-16 font-sans border-t border-gray-900">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Top Widget Section -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16 border-b border-gray-800 pb-16">
+      
+      <!-- Game News (Left) -->
+      <div>
+        <h3 class="text-white font-bold uppercase mb-8 text-sm tracking-wider">Game News</h3>
+        <div class="space-y-6">
+          {{ range first 3 .Site.RegularPages }}
+          <a href="{{ .Permalink }}" class="flex group items-start">
+            <div class="w-24 h-20 flex-shrink-0 overflow-hidden mr-4 bg-gray-800 rounded-sm">
+               <img src="{{ if .Params.image }}{{ .Params.image }}{{ else }}https://placehold.co/600x400/222/white?text=News{{ end }}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+            </div>
+            <div>
+              <h4 class="text-sm font-medium text-gray-200 leading-tight mb-2 group-hover:text-red-600 transition-colors line-clamp-2">{{ .Title }}</h4>
+              <span class="text-xs text-gray-500">{{ .Date.Format "January 02, 2006" }}</span>
+            </div>
+          </a>
+          {{ end }}
+        </div>
+      </div>
+
+      <!-- Popular Posts (Middle) -->
+      <div>
+        <h3 class="text-white font-medium uppercase mb-8 text-sm tracking-wider">Popular Posts</h3>
+        <div class="space-y-6">
+           <!-- Using offset 3 to show different posts since we don't have real popularity metrics yet -->
+          {{ range first 3 (after 3 .Site.RegularPages) }}
+          <a href="{{ .Permalink }}" class="flex group items-start">
+            <div class="w-24 h-20 flex-shrink-0 overflow-hidden mr-4 bg-gray-800 rounded-sm">
+               <img src="{{ if .Params.image }}{{ .Params.image }}{{ else }}https://placehold.co/600x400/222/white?text=Popular{{ end }}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+            </div>
+            <div>
+              <h4 class="text-sm font-medium text-gray-200 leading-tight mb-2 group-hover:text-red-600 transition-colors line-clamp-2">{{ .Title }}</h4>
+              <span class="text-xs text-gray-500">{{ .Date.Format "January 02, 2006" }}</span>
+            </div>
+          </a>
+          {{ end }}
+        </div>
+      </div>
+
+      <!-- Popular Category (Right) -->
+      <div>
+        <h3 class="text-white font-medium uppercase mb-8 text-sm tracking-wider">Popular Category</h3>
+        <ul class="space-y-3">
+          {{ $categories := .Site.Taxonomies.categories }}
+          {{ if gt (len $categories) 0 }}
+            {{ range $name, $taxonomy := $categories }}
+            <li class="flex justify-between items-center text-sm text-gray-400 pb-2 border-b border-gray-800 last:border-0">
+              <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}" class="hover:text-white transition-colors capitalize">{{ $name }}</a>
+              <span>{{ $taxonomy.Count }}</span>
+            </li>
+            {{ end }}
+          {{ else }}
+            <!-- Fallback static items if no categories exist yet -->
+            <li class="flex justify-between items-center text-sm text-gray-400 pb-2 border-b border-gray-800">
+              <a href="#" class="hover:text-white transition-colors">Video Games</a>
+              <span>9428</span>
+            </li>
+            <li class="flex justify-between items-center text-sm text-gray-400 pb-2 border-b border-gray-800">
+              <a href="#" class="hover:text-white transition-colors">Game Releases</a>
+              <span>3358</span>
+            </li>
+            <li class="flex justify-between items-center text-sm text-gray-400 pb-2 border-b border-gray-800">
+              <a href="#" class="hover:text-white transition-colors">Game Reviews</a>
+              <span>2925</span>
+            </li>
+            <li class="flex justify-between items-center text-sm text-gray-400 pb-2 border-b border-gray-800">
+              <a href="#" class="hover:text-white transition-colors">Latest News</a>
+              <span>917</span>
+            </li>
+            <li class="flex justify-between items-center text-sm text-gray-400 pb-2 border-b border-gray-800">
+              <a href="#" class="hover:text-white transition-colors">Top Games</a>
+              <span>664</span>
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+
+    <!-- Middle Info Section -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start mb-16">
+      <!-- Logo -->
+      <div class="md:col-span-3">
+        <a href="{{ .Site.BaseURL }}" class="block">
+          <span class="text-2xl font-black uppercase tracking-tighter text-white">
+            THE<span class="text-white">DOUBLE</span><span class="bg-red-600 text-white px-1 ml-1 rounded-sm">KILL</span>
+          </span>
+        </a>
+      </div>
+
+      <!-- About Us -->
+      <div class="md:col-span-6">
+        <h3 class="text-white font-bold uppercase mb-4 text-sm tracking-wider">About Us</h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+          Thedoublekill.com is a news aggregator site that provides the latest trending gaming news from around the web by utilizing third-party links. We provide you with the latest gaming industry.
+        </p>
+        <p class="text-gray-400 text-sm font-bold">
+          Contact us: <a href="mailto:contact@thedoublekill.com" class="text-red-600 hover:text-red-500 transition-colors">contact@thedoublekill.com</a>
+        </p>
+      </div>
+
+      <!-- Follow Us -->
+      <div class="md:col-span-3">
+        <h3 class="text-white font-bold uppercase mb-4 text-sm tracking-wider">Follow Us</h3>
+        <div class="flex gap-2">
+          <a href="#" class="w-10 h-10 bg-[#222] flex items-center justify-center text-gray-400 hover:bg-red-600 hover:text-white transition-all rounded-sm">
+            <iconify-icon icon="mdi:facebook" class="w-4 h-4"></iconify-icon>
+          </a>
+          <a href="#" class="w-10 h-10 bg-[#222] flex items-center justify-center text-gray-400 hover:bg-red-600 hover:text-white transition-all rounded-sm">
+            <iconify-icon icon="mdi:instagram" class="w-4 h-4"></iconify-icon>
+          </a>
+           <a href="#" class="w-10 h-10 bg-[#222] flex items-center justify-center text-gray-400 hover:bg-red-600 hover:text-white transition-all rounded-sm">
+            <iconify-icon icon="fa6-brands:x-twitter" class="w-4 h-4"></iconify-icon>
+          </a>
+           <a href="#" class="w-10 h-10 bg-[#222] flex items-center justify-center text-gray-400 hover:bg-red-600 hover:text-white transition-all rounded-sm">
+            <iconify-icon icon="mdi:youtube" class="w-4 h-4"></iconify-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="bg-black py-8 border-t border-gray-900">
+     <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] text-gray-400 font-medium uppercase tracking-wide">
+       <div>
+         All rights reserved © Thedoublekill.com
+       </div>
+       <div class="flex flex-wrap justify-center gap-6">
+         <a href="#" class="hover:text-white transition-colors">Contact</a>
+         <a href="#" class="hover:text-white transition-colors">DMCA</a>
+         <a href="#" class="hover:text-white transition-colors">Cookie Privacy Policy</a>
+         <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+         <a href="#" class="hover:text-white transition-colors">Terms of Use</a>
+         <a href="#" class="hover:text-white transition-colors">Disclaimer</a>
+       </div>
+     </div>
+  </div>
+  
+  <!-- Scroll Top Button -->
+  <button id="scroll-top" class="fixed bottom-8 right-8 w-10 h-10 bg-red-600 text-white flex items-center justify-center shadow-lg hover:bg-red-700 transition-all z-50 opacity-0 invisible translate-y-4 rounded-sm">
+    <iconify-icon icon="mdi:chevron-up" class="text-2xl"></iconify-icon>
+  </button>
+
+  <script>
+    const scrollBtn = document.getElementById('scroll-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        scrollBtn.classList.remove('opacity-0', 'invisible', 'translate-y-4');
+      } else {
+        scrollBtn.classList.add('opacity-0', 'invisible', 'translate-y-4');
+      }
+    });
+    scrollBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</footer>

@@ -1,0 +1,79 @@
+<section class="w-full bg-white hero-font py-8 mb-12">
+  <div class="content-container">
+    <h3 class="text-2xl font-black text-orange-500 mb-6">Latest Game News</h3>
+    
+    <!-- Grid Container -->
+    <div id="latest-games-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-8">
+      {{ range $index, $element := first 30 (where .Site.RegularPages "Section" "posts") }}
+      <div class="latest-game-item {{ if ge $index 10 }}hidden{{ end }} flex flex-col group">
+        <a href="{{ .Permalink }}" class="relative w-full h-40 overflow-hidden mb-3 block">
+            <img src="{{ if .Params.image }}{{ .Params.image }}{{ else }}https://placehold.co/600x400{{ end }}" alt="{{ .Title }}" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+            <span class="absolute bottom-0 left-0 text-white text-[10px] font-normal px-2 py-1 bg-black/60">Game news</span>
+        </a>
+        <h3 class="text-sm font-semibold text-gray-900 leading-snug mb-2 group-hover:text-orange-500 transition-colors">
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </h3>
+      </div>
+      {{ end }}
+    </div>
+
+    <!-- Load More Button -->
+    <div class="flex justify-center items-center">
+      <button id="load-more-btn" class="bg-orange-600 hover:bg-orange-700 text-white text-sm font-light py-2 px-4 rounded-sm transition-colors flex items-center gap-2">
+        <span>Load more</span>
+        <iconify-icon icon="mdi:chevron-right" class="text-lg"></iconify-icon>
+      </button>
+      
+      <!-- Spinner (Hidden by default) -->
+      <div id="loading-spinner" class="hidden">
+        <iconify-icon icon="eos-icons:loading" class="text-4xl text-orange-600 animate-spin"></iconify-icon>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const grid = document.getElementById('latest-games-grid');
+      const loadMoreBtn = document.getElementById('load-more-btn');
+      const spinner = document.getElementById('loading-spinner');
+      const items = grid.getElementsByClassName('latest-game-item');
+      let visibleCount = 10;
+      const increment = 10;
+
+      // Hide button if no more items to show initially
+      if (visibleCount >= items.length) {
+        loadMoreBtn.style.display = 'none';
+      }
+
+      loadMoreBtn.addEventListener('click', function() {
+        // Show spinner, hide button
+        loadMoreBtn.classList.add('hidden');
+        spinner.classList.remove('hidden');
+
+        // Simulate network delay (1.5 seconds)
+        setTimeout(() => {
+          let nextCount = visibleCount + increment;
+          
+          // Reveal next batch
+          for (let i = visibleCount; i < nextCount && i < items.length; i++) {
+            items[i].classList.remove('hidden');
+          }
+          
+          visibleCount = nextCount;
+
+          // Hide spinner
+          spinner.classList.add('hidden');
+
+          // Show button again if there are still hidden items
+          if (visibleCount < items.length) {
+            loadMoreBtn.classList.remove('hidden');
+            loadMoreBtn.style.display = 'flex'; // Ensure flex display is restored
+          } else {
+            loadMoreBtn.style.display = 'none'; // Permanently hide if done
+          }
+        }, 800);
+      });
+    });
+  </script>
+</section>

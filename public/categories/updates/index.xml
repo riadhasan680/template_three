@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Updates on TheDoubleKill — Gaming News Template</title>
+    <link>/categories/updates/</link>
+    <description>Recent content in Updates on TheDoubleKill — Gaming News Template</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 03 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/categories/updates/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Arrowhead Responds to Call for Helldivers Movie Director to Play</title>
+      <link>/posts/helldivers-movie-director/</link>
+      <pubDate>Wed, 03 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>/posts/helldivers-movie-director/</guid>
+      <description>&lt;p&gt;Arrowhead’s CEO weighed in after fans questioned Justin Lin’s appointment, urging openness while emphasizing the spirit of the game.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Elden Ring Nightreign 1.03 Update Ahead of Forsaken Hollows</title>
+      <link>/posts/elden-ring-nightreign-patch/</link>
+      <pubDate>Wed, 03 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>/posts/elden-ring-nightreign-patch/</guid>
+      <description>&lt;p&gt;The new patch introduces balance changes, fixes, and improvements as players prepare for the upcoming DLC release.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

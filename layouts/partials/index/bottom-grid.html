@@ -1,0 +1,207 @@
+<section class="w-full bg-white hero-font py-8 mb-12">
+  <div class="content-container">
+    
+    <!-- Row 1: Orange Headers -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+      
+      <!-- Column 1: Tech News -->
+      <div class="flex flex-col">
+        <h3 class="text-2xl font-black text-orange-500 mb-4">Tech News</h3>
+        <!-- Featured Item -->
+        {{ range first 1 .Site.RegularPages }}
+        <div class="relative w-full h-48 mb-4 group overflow-hidden rounded-sm">
+          <a href="{{ .Permalink }}" class="block w-full h-full">
+            <img src="{{ if .Params.image }}{{ .Params.image }}{{ else }}https://placehold.co/600x400{{ end }}" alt="{{ .Title }}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 p-4 w-full">
+              <h4 class="text-white font-medium leading-tight mb-1 text-sm md:text-base group-hover:text-orange-400 transition-colors">
+                {{ .Title }}
+              </h4>
+              <div class="text-[11px] text-gray-300 font-medium">
+                Thedoublekill - {{ .Date.Format "January 2, 2006" }}
+              </div>
+            </div>
+          </a>
+        </div>
+        {{ end }}
+        <!-- List Items -->
+        <div class="flex flex-col">
+          {{ range first 4 (after 1 .Site.RegularPages) }}
+          <div class="border-b border-gray-200 py-3 last:border-0">
+            <h5 class="text-xs font-light text-gray-600 leading-snug hover:text-orange-500 transition-colors">
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </h5>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+
+      <!-- Column 2: What's New -->
+      <div class="flex flex-col">
+        <h3 class="text-2xl font-black text-orange-500 mb-4">What's New</h3>
+        <!-- Featured Item -->
+        {{ range first 1 (shuffle .Site.RegularPages) }}
+        <div class="relative w-full h-48 mb-4 group overflow-hidden rounded-sm">
+          <a href="{{ .Permalink }}" class="block w-full h-full">
+            <img src="{{ if .Params.image }}{{ .Params.image }}{{ else }}https://placehold.co/600x400{{ end }}" alt="{{ .Title }}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 p-4 w-full">
+              <h4 class="text-white font-medium leading-tight mb-1 text-sm md:text-base group-hover:text-orange-400 transition-colors">
+                {{ .Title }}
+              </h4>
+              <div class="text-[11px] text-gray-300 font-medium">
+                Thedoublekill - {{ .Date.Format "January 2, 2006" }}
+              </div>
+            </div>
+          </a>
+        </div>
+        {{ end }}
+        <!-- List Items -->
+        <div class="flex flex-col">
+          {{ range first 4 (after 2 .Site.RegularPages) }}
+          <div class="border-b border-gray-200 py-3 last:border-0">
+            <h5 class="text-xs font-medium text-gray-600 leading-snug hover:text-orange-500 transition-colors">
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </h5>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+
+      <!-- Column 3: Latest News -->
+      <div class="flex flex-col">
+        <h3 class="text-2xl font-black text-orange-500 mb-4">Latest News</h3>
+        <!-- Featured Item -->
+        {{ range first 1 (after 3 .Site.RegularPages) }}
+        <div class="relative w-full h-48 mb-4 group overflow-hidden rounded-sm">
+          <a href="{{ .Permalink }}" class="block w-full h-full">
+            <img src="{{ if .Params.image }}{{ .Params.image }}{{ else }}https://placehold.co/600x400{{ end }}" alt="{{ .Title }}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 p-4 w-full">
+              <h4 class="text-white font-medium leading-tight mb-1 text-sm md:text-base group-hover:text-orange-400 transition-colors">
+                {{ .Title }}
+              </h4>
+              <div class="text-[11px] text-gray-300 font-medium">
+                Thedoublekill - {{ .Date.Format "January 2, 2006" }}
+              </div>
+            </div>
+          </a>
+        </div>
+        {{ end }}
+        <!-- List Items -->
+        <div class="flex flex-col">
+          {{ range first 4 (after 4 .Site.RegularPages) }}
+          <div class="border-b border-gray-200 py-3 last:border-0">
+            <h5 class="text-xs font-medium text-gray-600 leading-snug hover:text-orange-500 transition-colors">
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </h5>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Row 2: Red Headers -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Column 1: Game Reviews -->
+      <div class="flex flex-col">
+        <h3 class="text-2xl font-black text-red-600 mb-4">Game Reviews</h3>
+        <!-- Featured Item -->
+        {{ range first 1 (after 1 .Site.RegularPages) }}
+        <div class="relative w-full h-48 mb-4 group overflow-hidden rounded-sm">
+          <a href="{{ .Permalink }}" class="block w-full h-full">
+            <img src="{{ if .Params.image }}{{ .Params.image }}{{ else }}https://placehold.co/600x400{{ end }}" alt="{{ .Title }}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 p-4 w-full">
+              <h4 class="text-white font-medium leading-tight mb-1 text-sm md:text-base group-hover:text-red-500 transition-colors">
+                {{ .Title }}
+              </h4>
+              <div class="text-[11px] text-gray-300 font-medium">
+                Thedoublekill - {{ .Date.Format "January 2, 2006" }}
+              </div>
+            </div>
+          </a>
+        </div>
+        {{ end }}
+        <!-- List Items -->
+        <div class="flex flex-col">
+          {{ range first 4 (after 5 .Site.RegularPages) }}
+          <div class="border-b border-gray-200 py-3 last:border-0">
+            <h5 class="text-xs font-medium text-gray-600 leading-snug hover:text-red-600 transition-colors">
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </h5>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+
+      <!-- Column 2: Game Release -->
+      <div class="flex flex-col">
+        <h3 class="text-2xl font-black text-red-600 mb-4">Game Release</h3>
+        <!-- Featured Item -->
+        {{ range first 1 (after 2 .Site.RegularPages) }}
+        <div class="relative w-full h-48 mb-4 group overflow-hidden rounded-sm">
+          <a href="{{ .Permalink }}" class="block w-full h-full">
+            <img src="{{ if .Params.image }}{{ .Params.image }}{{ else }}https://placehold.co/600x400{{ end }}" alt="{{ .Title }}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 p-4 w-full">
+              <h4 class="text-white font-medium leading-tight mb-1 text-sm md:text-base group-hover:text-red-500 transition-colors">
+                {{ .Title }}
+              </h4>
+              <div class="text-[11px] text-gray-300 font-medium">
+                Thedoublekill - {{ .Date.Format "January 2, 2006" }}
+              </div>
+            </div>
+          </a>
+        </div>
+        {{ end }}
+        <!-- List Items -->
+        <div class="flex flex-col">
+          {{ range first 4 (after 3 .Site.RegularPages) }}
+          <div class="border-b border-gray-200 py-3 last:border-0">
+            <h5 class="text-xs font-medium text-gray-600 leading-snug hover:text-red-600 transition-colors">
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </h5>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+
+      <!-- Column 3: Apex Legends -->
+      <div class="flex flex-col">
+        <h3 class="text-2xl font-black text-red-600 mb-4">Apex Legends</h3>
+        <!-- Featured Item -->
+        {{ range first 1 (after 4 .Site.RegularPages) }}
+        <div class="relative w-full h-48 mb-4 group overflow-hidden rounded-sm">
+          <a href="{{ .Permalink }}" class="block w-full h-full">
+            <img src="{{ if .Params.image }}{{ .Params.image }}{{ else }}https://placehold.co/600x400{{ end }}" alt="{{ .Title }}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 p-4 w-full">
+              <h4 class="text-white font-medium leading-tight mb-1 text-sm md:text-base group-hover:text-red-500 transition-colors">
+                {{ .Title }}
+              </h4>
+              <div class="text-[11px] text-gray-300 font-medium">
+                Thedoublekill - {{ .Date.Format "January 2, 2006" }}
+              </div>
+            </div>
+          </a>
+        </div>
+        {{ end }}
+        <!-- List Items -->
+        <div class="flex flex-col">
+          {{ range first 4 (after 1 .Site.RegularPages) }}
+          <div class="border-b border-gray-200 py-3 last:border-0">
+            <h5 class="text-xs font-medium text-gray-600 leading-snug hover:text-red-600 transition-colors">
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </h5>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

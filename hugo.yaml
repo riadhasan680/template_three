@@ -1,0 +1,26 @@
+baseURL: "https://example.org/"
+languageCode: "en-us"
+title: "The Double Kill"
+theme: []
+
+params:
+  description: "The latest gaming news, reviews, and guides."
+  author: "Double Kill Team"
+
+menu:
+  main:
+    - name: "Home"
+      url: "/"
+      weight: 1
+    - name: "News"
+      url: "/posts"
+      weight: 2
+    - name: "Reviews"
+      url: "/posts"
+      weight: 3
+    - name: "Guides"
+      url: "/posts"
+      weight: 4
+
+build:
+  writeStats: true

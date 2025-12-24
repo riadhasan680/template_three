@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+  <header class="mb-8">
+    <h1 class="text-3xl font-bold">{{ .Title }}</h1>
+    {{ with .Params.description }}<p class="text-zinc-400">{{ . }}</p>{{ end }}
+  </header>
+  <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    {{ range .Paginator.Pages }}
+      {{ partial "post-card.html" . }}
+    {{ end }}
+  </div>
+  <nav class="mt-8 flex items-center justify-center gap-2">
+    {{ if .Paginator.HasPrev }}<a class="inline-block text-xs uppercase tracking-wide px-2 py-1 rounded bg-zinc-700 text-zinc-200" href="{{ .Paginator.Prev.URL }}">Prev</a>{{ end }}
+    <span class="text-xs text-zinc-400">Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}</span>
+    {{ if .Paginator.HasNext }}<a class="inline-block text-xs uppercase tracking-wide px-2 py-1 rounded bg-zinc-700 text-zinc-200" href="{{ .Paginator.Next.URL }}">Next</a>{{ end }}
+  </nav>
+</div>
+{{ end }}

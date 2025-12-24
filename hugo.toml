@@ -1,0 +1,18 @@
+baseURL = '/'
+languageCode = 'en-us'
+title = 'TheDoubleKill — Gaming News Template'
+enableRobotsTXT = true
+
+[params]
+site_tagline = 'Gaming News, Game Reviews and Updates'
+
+[pagination]
+pagerSize = 12
+
+[taxonomies]
+category = 'categories'
+tag = 'tags'
+
+[params.logo]
+color = '#e11d48'
+text_color = '#111827'

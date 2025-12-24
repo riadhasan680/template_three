@@ -1,0 +1,156 @@
+<header class="sticky top-0 z-50 flex flex-col w-full font-heading">
+  <div class="bg-white border-b border-gray-100 relative w-full shadow-sm z-50">
+    <div class="w-full px-4 sm:px-6 lg:px-8 h-16 md:h-16 flex items-center justify-between">
+      
+      <!-- Mobile: Toggle Button (Left) -->
+      <div class="flex md:hidden justify-start flex-1 items-center">
+        <button id="mobile-menu-btn" class="text-gray-800 hover:text-brand z-50 relative flex items-center">
+          <iconify-icon id="menu-icon" icon="mdi:menu" class=" text-2xl transition-all duration-300"></iconify-icon>
+          <iconify-icon id="close-icon" icon="mdi:close" class=" text-2xl hidden text-red-600 transition-all duration-300"></iconify-icon>
+        </button>
+      </div>
+
+      <!-- Logo (Center on Mobile, Left on Desktop) -->
+      <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 md:static md:transform-none md:flex md:justify-start md:flex-none md:items-center">
+        <a href="{{ .Site.BaseURL }}" class="flex-shrink-0 flex items-center gap-1">
+          <div class="text-2xl md:text-3xl text-black font-bold uppercase tracking-tighter">
+            <h1>the <span class="text-brand">double </span><span class="text-red-600">kill</span></h1>
+          </div>
+        </a>
+      </div>
+
+      <!-- Desktop Nav (Center/Left) -->
+      <nav class="hidden md:flex items-center gap-4 md:gap-6 whitespace-nowrap ml-20">
+        <a href="/"
+          class="text-black  px-3 py-1 rounded-sm font-normal uppercase tracking-wide text-sm md:text-[16px] transition-colors">Home</a>
+        <a href="/news"
+          class="text-black hover:text-brand font-normal uppercase tracking-tight text-xs md:text-[16px] transition-colors">Game
+          News</a>
+        <a href="/playstation"
+          class="text-black hover:text-brand font-normal uppercase tracking-tight text-xs md:text-[16px] transition-colors">PlayStation</a>
+        <a href="/reviews"
+          class="text-black hover:text-brand font-normal uppercase tracking-tight text-xs md:text-[16px] transition-colors">Reviews</a>
+        <a href="/releases"
+          class="text-black hover:text-brand font-normal uppercase tracking-tight text-xs md:text-[16px] transition-colors">Game
+          Releases</a>
+        <a href="/apex-legends"
+          class="text-black hover:text-brand font-normal uppercase tracking-tight text-xs md:text-[16px] transition-colors">Apex
+          Legends</a>
+        <a href="/fortnite"
+          class="text-black hover:text-brand font-normal uppercase tracking-tight text-xs md:text-[16px] transition-colors">Fortnite</a>
+      </nav>
+
+      <!-- Search Button (Right) -->
+      <div class="flex justify-end flex-1 md:flex-none md:ml-auto items-center">
+        <button id="search-btn" class="text-gray-600 hover:text-brand transition-colors flex items-center">
+          <iconify-icon icon="mdi:magnify" class=" text-2xl"></iconify-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu-overlay" class="fixed inset-0 top-[95px] bg-black/50 z-30 hidden transition-opacity duration-300 opacity-0"></div>
+
+  <!-- Mobile Side Menu Drawer -->
+  <div id="mobile-menu"
+    class="fixed top-[95px] left-0 bottom-0 w-[80%] max-w-sm bg-red-600 shadow-2xl z-40 transform -translate-x-full transition-transform duration-300 ease-in-out">
+    <nav class="px-6 py-4 flex flex-col gap-6 font-heading">
+      <a href="/" class="text-white hover:text-gray-200 font-medium uppercase text-sm border-b border-white/20 pb-2">Home</a>
+      <a href="/news" class="text-white hover:text-gray-200 font-medium uppercase text-sm border-b border-white/20 pb-2">Game News</a>
+      <a href="/playstation" class="text-white hover:text-gray-200 font-medium uppercase text-sm border-b border-white/20 pb-2">PlayStation</a>   
+      <a href="/reviews" class="text-white hover:text-gray-200 font-medium uppercase text-sm border-b border-white/20 pb-2">Reviews</a>
+      <a href="/releases" class="text-white hover:text-gray-200 font-medium uppercase text-sm border-b border-white/20 pb-2">Game Releases</a>
+      <a href="/apex-legends" class="text-white hover:text-gray-200 font-medium uppercase text-sm border-b border-white/20 pb-2">Apex Legends</a>
+      <a href="/fortnite" class="text-white hover:text-gray-200 font-medium uppercase text-sm border-b border-white/20 pb-2">Fortnite</a>
+    </nav>
+    <div class="px-6 mt-4">
+      <div class="text-sm text-white/80 font-medium uppercase tracking-wider mb-4">Follow Us</div>
+      <div class="flex gap-4">
+        <a href="#" class="text-white hover:text-black transition-colors"><iconify-icon icon="mdi:facebook" class="w-6 h-6"></iconify-icon></a>
+        <a href="#" class="text-white hover:text-black transition-colors"><iconify-icon icon="mdi:twitter" class="w-6 h-6"></iconify-icon></a>
+        <a href="#" class="text-white hover:text-black transition-colors"><iconify-icon icon="mdi:youtube" class="w-6 h-6"></iconify-icon></a>
+        <a href="#" class="text-white hover:text-black transition-colors"><iconify-icon icon="mdi:instagram" class="w-6 h-6"></iconify-icon></a>
+      </div>
+    </div>
+  </div>
+
+  <div id="search-modal" class="fixed inset-0 hidden bg-black/60 backdrop-blur-sm z-[60]">
+    <div class="flex items-start justify-center pt-24">
+      <div class="w-full max-w-2xl mx-4 bg-white rounded-xl shadow-xl p-6">
+        <div class="flex items-center gap-3">
+          <iconify-icon icon="mdi:magnify" class="w-6 h-6 text-gray-500"></iconify-icon>
+          <input id="search-input" type="text" placeholder="Search articles, reviews, updates..."
+            class="w-full outline-none text-gray-900 placeholder-gray-400 bg-transparent">
+          <button id="search-close" class="text-gray-500 hover:text-gray-800">
+            <iconify-icon icon="mdi:close" class="w-6 h-6"></iconify-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Search Modal Logic
+      const btn = document.getElementById('search-btn');
+      const modal = document.getElementById('search-modal');
+      const close = document.getElementById('search-close');
+      const input = document.getElementById('search-input');
+      
+      function openModal() {
+        modal.classList.remove('hidden');
+        setTimeout(() => input && input.focus(), 50);
+      }
+      function closeModal() {
+        modal.classList.add('hidden');
+      }
+      if (btn) btn.addEventListener('click', openModal);
+      if (close) close.addEventListener('click', closeModal);
+      if (modal) modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+      // Mobile Menu Logic
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const overlay = document.getElementById('mobile-menu-overlay');
+      const menuIcon = document.getElementById('menu-icon');
+      const closeIcon = document.getElementById('close-icon');
+      let isMenuOpen = false;
+
+      function toggleMobileMenu() {
+        isMenuOpen = !isMenuOpen;
+        
+        if (isMenuOpen) {
+          // Open Menu
+          mobileMenu.classList.remove('-translate-x-full');
+          overlay.classList.remove('hidden');
+          // Small delay to allow display:block to apply before opacity transition
+          setTimeout(() => overlay.classList.remove('opacity-0'), 10);
+          
+          // Switch Icon
+          menuIcon.classList.add('hidden');
+          closeIcon.classList.remove('hidden');
+          
+          // Prevent body scroll
+          document.body.style.overflow = 'hidden';
+        } else {
+          // Close Menu
+          mobileMenu.classList.add('-translate-x-full');
+          overlay.classList.add('opacity-0');
+          setTimeout(() => overlay.classList.add('hidden'), 300);
+          
+          // Switch Icon
+          menuIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+          
+          // Restore body scroll
+          document.body.style.overflow = '';
+        }
+      }
+
+      if (mobileBtn) mobileBtn.addEventListener('click', toggleMobileMenu);
+      if (overlay) overlay.addEventListener('click', toggleMobileMenu);
+    });
+  </script>
+</header>
